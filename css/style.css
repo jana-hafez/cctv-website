@@ -1,0 +1,200 @@
+:root {
+    --primary: #1A73E8; /* اللون الأزرق الهادئ */
+    --secondary: #34A853; /* اللون الأخضر الهادئ */
+    --light: #F1F3F4; /* خلفية فاتحة جدًا */
+    --dark: #202124; /* اللون الداكن للنصوص */
+    --accent: #FBBC05; /* لون مميز للإبراز */
+}
+
+[class^=flaticon-]:before,
+[class*=" flaticon-"]:before,
+[class^=flaticon-]:after,
+[class*=" flaticon-"]:after {
+    font-size: inherit;
+    margin-left: 0;
+}
+
+h1, h2, .font-weight-bold {
+    font-weight: 700 !important;
+    letter-spacing: 2px; /* زيادة التباعد بين الأحرف */
+    color: var(--primary); /* تغيير اللون الرئيسي للعناوين */
+    font-family: 'Roboto', sans-serif; /* تغيير الخط إلى Roboto */
+}
+
+h3, h4, .font-weight-semi-bold {
+    font-weight: 600 !important;
+    color: var(--dark); /* تغيير لون العناوين الثانوية */
+    font-family: 'Roboto', sans-serif;
+}
+
+h5, h6, .font-weight-medium {
+    font-weight: 500 !important;
+    color: var(--dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 50px; /* زيادة التدوير للحصول على شكل دائري */
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out, box-shadow 0.3s ease; /* تحسين التأثيرات */
+    padding: 16px 35px; /* زيادة الحجم */
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+    border: none; /* إزالة الحدود */
+    background-color: var(--primary); /* استخدام اللون الأزرق */
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary); /* تغيير اللون عند التمرير */
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15); /* تأثير الظل */
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent); /* تغيير اللون عند التمرير */
+    transform: scale(1.1); 
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-left: 20px;
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--dark);
+    transition: color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary);
+    padding: 18px 0 18px 15px;
+    border-left: 4px solid var(--primary); /* زيادة عرض الحدود */
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* تغيير الخلفية لجعل النص أكثر وضوحًا */
+    padding: 50px;
+    border-radius: 20px;
+    color: var(--light);
+    font-size: 1.6rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%; /* جعل الأزرار أكبر */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary);
+}
+
+.hero-header {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/new-carousel.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 130px 0; /* زيادة الحشو العلوي والسفلي */
+    text-align: center;
+    background-attachment: fixed; /* تأثير بارالاكس */
+}
+
+.hero-header h1, .hero-header p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* تحسين الظل للنصوص */
+}
+
+.hero-header .btn {
+    font-weight: 700;
+    padding: 20px 50px; /* زيادة حجم الأزرار */
+    background-color: var(--primary);
+    border-radius: 50px;
+}
+
+.hero-header .btn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+}
+
+
+.service-item div {
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-item div:hover {
+    transform: translateY(-15px); /* رفع العناصر عند التمرير */
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-item div::after {
+    width: 100%;
+    background: var(--primary);
+}
+
+.bg-offer {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/new-offer.jpg) top left no-repeat;
+    background-size: cover;
+}
+
+.testimonial-carousel .owl-dot {
+    width: 14px;
+    height: 14px;
+    background: #E0E0E0;
+    border-radius: 50%;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background-color: var(--primary);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.blog-date {
+    position: absolute;
+    top: 90px;
+    left: -40px;
+    background: var(--secondary);
+    border-radius: 25px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-date::after {
+    border: 15px solid transparent;
+    border-color: transparent #34A853 #34A853 transparent;
+}
